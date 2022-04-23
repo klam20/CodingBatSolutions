@@ -1,0 +1,28 @@
+public int loneSum(int a, int b, int c) {
+  //Consider that there can only be these cases:
+    // a==b
+    // a==c
+    // b==c
+    // a==b==c
+    
+    //Consider if a==b==c
+    if (a==b && a==c){
+      return 0;
+    }
+    //Consider if just a==b
+    else if (a==b) {
+      return c;
+    }
+    //Consider if a==c
+    else if (a==c) {
+      return b;
+    }
+    //Consider if b==c    
+    else if (b==c) {
+      return a;
+    }
+    //Not any of these cases then just add
+    else {
+      return a+b+c;
+    }
+}
