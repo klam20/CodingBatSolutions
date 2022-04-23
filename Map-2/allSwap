@@ -1,0 +1,17 @@
+public String[] allSwap(String[] strings) {
+  Map<String,Integer> map = new HashMap<String,Integer>();
+  String[] newArray = new String[strings.length];
+  for (int i = 0; i < strings.length; i++) {
+    if (!map.containsKey(strings[i].substring(0,1))) {
+      map.put(strings[i].substring(0,1), i);
+      newArray[i] = strings[i];
+    }
+    else {
+      int originalIndex = map.get(strings[i].substring(0,1)); //store initial index
+      newArray[originalIndex] = strings[i]; //in newArray set the original to the value of 2nd key
+      newArray[i] = strings[originalIndex]; // in newArray set the new index to the value of the original index
+      map.remove(strings[i].substring(0,1));
+    } 
+  }
+  return newArray;
+}
