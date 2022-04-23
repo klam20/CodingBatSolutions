@@ -1,0 +1,14 @@
+public String minCat(String a, String b) {
+  int lengthDiff = Math.abs(a.length()-b.length());
+  int lengthA = a.length();
+  int lengthB = b.length();
+  if (lengthA > lengthB) {
+    a = a.substring(lengthDiff);
+    return a.concat(b);
+  }
+  else if (lengthB > lengthA) {
+    b = b.substring(lengthDiff);
+    return a.concat(b);
+  }
+  return a.concat(b);
+}
