@@ -1,0 +1,23 @@
+public int blackjack(int a, int b) {
+  //What if both are over 21?
+  if (a>21 && b>21) {
+    return 0;
+  }
+  //What if a is over 21?
+  else if (a>21) {
+    return b;
+  }
+  //What if b is over 21?
+  else if (b>21) {
+    return a;
+  }
+  //Figure out which ones have a smaller difference
+  else {
+    if (a>b) {
+      return a;
+    }
+    else {
+      return b;
+    }
+  }
+}
