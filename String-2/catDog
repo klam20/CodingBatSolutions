@@ -1,0 +1,21 @@
+public boolean catDog(String str) {
+  //catdog
+  //0123456
+  //
+  int count_cat = 0;
+  int count_dog = 0;
+  for (int i = 0; i < str.length()-2; i++) {
+    if (str.substring(i,i+3).equals("cat")) {
+      count_cat += 1;
+    }
+    if (str.substring(i,i+3).equals("dog")) {
+      count_dog += 1;
+    }
+  }
+  if (count_cat == count_dog) {
+    return true;
+  }
+  else{
+    return false;
+  }
+}
