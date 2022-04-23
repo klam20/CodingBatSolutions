@@ -1,0 +1,14 @@
+public boolean makeBricks(int small, int big, int goal) {
+  //Possibly can be done through negation
+  
+  //My approach is as follows:
+  //5*big + small < goal
+  //  If our total sum is less than our goal this is automatically false
+  //OR
+  //If the goal contains a remainder greater than the number of smalls we have this is also false
+
+  if (5*big + small < goal || goal % 5 > small) {
+    return false;
+  }
+  return true;
+}
