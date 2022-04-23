@@ -1,0 +1,22 @@
+public int luckySum(int a, int b, int c) {
+  //Think about it like this
+  //1)If a is 13 then nothing counts
+  //2)If b is 13 then only a counts
+  //3)If c is 13 then only a and b count
+  
+  //1)
+  if (a==13) {
+    return 0;
+  //2)
+  }
+  else if (b==13) {
+    return a;
+  //3)
+  }
+  else if (c==13) {
+    return a+b;
+  }
+  else { //Catch the rest
+    return a+b+c;
+  }
+}
